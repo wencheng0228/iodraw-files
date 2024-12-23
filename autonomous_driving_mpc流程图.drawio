@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
   <diagram name="第 1 页" id="JLh_u_eclK7PWIMg6XK-">
-    <mxGraphModel dx="698" dy="388" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1184" dy="657" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,25 +8,25 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-1" value="开始" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="375" y="60" width="120" height="60" as="geometry" />
+          <mxGeometry x="200" y="110" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-4" target="AblfYPGntkIISl-miZuX-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-4" value="初始化ros节点为controller_mpc" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="375" y="200" width="120" height="60" as="geometry" />
+          <mxGeometry x="200" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-6" target="AblfYPGntkIISl-miZuX-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-6" value="创建公共命名空间的句柄nh，进而创建发布者和订阅者" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="375" y="340" width="120" height="60" as="geometry" />
+          <mxGeometry x="200" y="390" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-8" target="AblfYPGntkIISl-miZuX-20">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-8" value="创建私有命名空间的句柄nh_priv，进而读取两个私有配置参数并加载到规划模块中，调用computeSplineWithPoints函数&lt;font color=&quot;#cc0000&quot;&gt;&lt;b&gt;生成三次样条曲线（有详细流程图）&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="325" y="480" width="220" height="60" as="geometry" />
+          <mxGeometry x="150" y="530" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="AblfYPGntkIISl-miZuX-11" target="AblfYPGntkIISl-miZuX-13" parent="1">
           <mxGeometry relative="1" as="geometry" />
@@ -55,23 +55,39 @@
         <mxCell id="AblfYPGntkIISl-miZuX-18" value="结束" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1095" y="630" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="AblfYPGntkIISl-miZuX-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-20" target="AblfYPGntkIISl-miZuX-22">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="AblfYPGntkIISl-miZuX-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-20" target="AblfYPGntkIISl-miZuX-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="770" />
+              <mxPoint x="410" y="770" />
+              <mxPoint x="410" y="60" />
+              <mxPoint x="605" y="60" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-20" value="重置仿真器，初始化MPC参数、车辆模型参数、边界条件、MPC代价函数的权重" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="375" y="620" width="120" height="60" as="geometry" />
+          <mxGeometry x="200" y="670" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-22" target="AblfYPGntkIISl-miZuX-24">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="604.89" y="640" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="740" y="140" />
+              <mxPoint x="740" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-22" value="主循环开始" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="375" y="760" width="120" height="60" as="geometry" />
+          <mxGeometry x="544.89" y="110" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-24" target="AblfYPGntkIISl-miZuX-36">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-24" value="调用getPath函数，基于当前位姿和当前的参考轨迹点，&lt;b&gt;&lt;font color=&quot;#cc0000&quot;&gt;计算在预测时域内的一系列轨迹点（有详细流程图）&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="348.75" y="900" width="172.5" height="60" as="geometry" />
+          <mxGeometry x="518.64" y="250" width="172.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="AblfYPGntkIISl-miZuX-27" target="AblfYPGntkIISl-miZuX-29" parent="1">
           <mxGeometry relative="1" as="geometry" />
@@ -96,8 +112,126 @@
         <mxCell id="AblfYPGntkIISl-miZuX-34" value="结束" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1375" y="490" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-36" target="AblfYPGntkIISl-miZuX-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="AblfYPGntkIISl-miZuX-36" value="调用update函数，&lt;b&gt;&lt;font color=&quot;#cc0000&quot;&gt;计算MPC输出（有详细流程图）&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="375" y="1040" width="120" height="60" as="geometry" />
+          <mxGeometry x="544.89" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="AblfYPGntkIISl-miZuX-39" target="AblfYPGntkIISl-miZuX-41" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-39" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;update()&lt;/span&gt;&lt;div&gt;&lt;b style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font color=&quot;#cc0000&quot;&gt;计算MPC输出&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;fontColor=#CC0000;" vertex="1" parent="1">
+          <mxGeometry x="1745.63" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="AblfYPGntkIISl-miZuX-41" target="AblfYPGntkIISl-miZuX-43" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-41" value="将当前车辆状态赋值给state_with_new_control_input" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1721.17" y="210" width="168.91" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-43" target="AblfYPGntkIISl-miZuX-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-43" value="调用simulate函数计算dt时间后车辆的新的状态，赋值给linearize_point变量" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1720" y="350" width="171.26" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-45" target="AblfYPGntkIISl-miZuX-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-45" value="调用Controller::update函数，&lt;b&gt;&lt;font color=&quot;#cc0000&quot;&gt;计算MPC的输出（有详细流程图）&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1745.63" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-47" target="AblfYPGntkIISl-miZuX-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-47" value="基于MPC输出的控制指令计算delta_output，如果delta_output过小就认为是收敛了就跳出for循环" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1709.8500000000001" y="630" width="191.55" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-49" target="AblfYPGntkIISl-miZuX-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-49" value="将计算出的MPC的输出赋值给state_with_new_control_input，以更新车辆暂存的控制指令" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1718.45" y="770" width="174.37" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AblfYPGntkIISl-miZuX-53" target="AblfYPGntkIISl-miZuX-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-53" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;发布控制指令、可视化等&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="544.89" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-55" value="结束" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="544.89" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-60" value="结束" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1745.635" y="910" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-62" value="" style="endArrow=classic;html=1;rounded=0;edgeStyle=elbowEdgeStyle;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1806" y="860" as="sourcePoint" />
+            <mxPoint x="1806" y="310" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1950" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-63" value="for循环" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="AblfYPGntkIISl-miZuX-62">
+          <mxGeometry x="0.0626" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="AblfYPGntkIISl-miZuX-65" target="AblfYPGntkIISl-miZuX-67" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-65" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;update()&lt;/span&gt;&lt;div&gt;&lt;b style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font color=&quot;#cc0000&quot;&gt;计算MPC输出&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;fontColor=#CC0000;" vertex="1" parent="1">
+          <mxGeometry x="2255.78" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="AblfYPGntkIISl-miZuX-67" target="AblfYPGntkIISl-miZuX-69" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-67" value="将当前车辆状态赋值给state_with_new_control_input" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2231.32" y="210" width="168.91" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="AblfYPGntkIISl-miZuX-69" target="AblfYPGntkIISl-miZuX-71" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-69" value="调用simulate函数计算dt时间后车辆的新的状态，赋值给linearize_point变量" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2230.15" y="350" width="171.26" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="AblfYPGntkIISl-miZuX-71" target="AblfYPGntkIISl-miZuX-73" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-71" value="调用Controller::update函数，&lt;b&gt;&lt;font color=&quot;#cc0000&quot;&gt;计算MPC的输出（有详细流程图）&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2255.78" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="AblfYPGntkIISl-miZuX-73" target="AblfYPGntkIISl-miZuX-75" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-73" value="基于MPC输出的控制指令计算delta_output，如果delta_output过小就认为是收敛了就跳出for循环" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="630" width="191.55" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-74" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="AblfYPGntkIISl-miZuX-75" target="AblfYPGntkIISl-miZuX-76" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-75" value="将计算出的MPC的输出赋值给state_with_new_control_input，以更新车辆暂存的控制指令" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2228.6" y="770" width="174.37" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-76" value="结束" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2255.785" y="910" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-77" value="" style="endArrow=classic;html=1;rounded=0;edgeStyle=elbowEdgeStyle;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2316.15" y="860" as="sourcePoint" />
+            <mxPoint x="2316.15" y="310" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2460.15" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AblfYPGntkIISl-miZuX-78" value="for循环" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="AblfYPGntkIISl-miZuX-77">
+          <mxGeometry x="0.0626" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
