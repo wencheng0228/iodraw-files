@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
   <diagram name="第 1 页" id="hwGAMa8Qym_tdzRik-dT">
-    <mxGraphModel dx="1946" dy="1080" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1602" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -16,7 +16,7 @@
         <mxCell id="DEDyVDNNjn7AEogCk7KL-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DEDyVDNNjn7AEogCk7KL-3" target="DEDyVDNNjn7AEogCk7KL-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="DEDyVDNNjn7AEogCk7KL-3" value="在MPCNode()的构造中加载配置参数、定义发布者订阅者、开启一个定时器以10HZ的频率持续调用MPCNode::controlLoopCB函数实现&lt;b&gt;&lt;font color=&quot;#cc0000&quot;&gt;控制闭环（有详细的流程图）&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-3" value="在MPCNode()的构造中加载配置参数、MPC的参数、定义发布者订阅者、开启一个定时器以10HZ的频率持续调用MPCNode::controlLoopCB函数实现&lt;b&gt;&lt;font color=&quot;#cc0000&quot;&gt;控制闭环（有详细的流程图）&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="220" width="270" height="60" as="geometry" />
         </mxCell>
         <mxCell id="DEDyVDNNjn7AEogCk7KL-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DEDyVDNNjn7AEogCk7KL-7" target="DEDyVDNNjn7AEogCk7KL-9">
@@ -71,6 +71,51 @@
         </mxCell>
         <mxCell id="DEDyVDNNjn7AEogCk7KL-25" value="结束" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="505" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="DEDyVDNNjn7AEogCk7KL-29" target="DEDyVDNNjn7AEogCk7KL-31" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-29" value="MPC::Solve()&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#cc0000&quot;&gt;求解优化问题&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="DEDyVDNNjn7AEogCk7KL-31" target="DEDyVDNNjn7AEogCk7KL-33" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-31" value="计算决策变量数量（包括状态变量和控制变量），计算约束数量" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="820" y="220" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="DEDyVDNNjn7AEogCk7KL-33" target="DEDyVDNNjn7AEogCk7KL-35" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-33" value="定义一个向量vars存放决策变量，其中元素都初始化为0，然后根据预测时域找到各个变量的起始的索引，将对应的初始值设置为当前值" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="825" y="360" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="DEDyVDNNjn7AEogCk7KL-35" target="DEDyVDNNjn7AEogCk7KL-37" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-35" value="填充存放决策向量的幅值的向量（这个不是约束向量，相当于限幅而已）&lt;div&gt;填充约束向量&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="825" y="500" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="DEDyVDNNjn7AEogCk7KL-37" target="DEDyVDNNjn7AEogCk7KL-39" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-37" value="建立一个FG_eval类的对象并加载MPC的参数，这个类中有代价函数，是必须这样实现。" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="825" y="640" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DEDyVDNNjn7AEogCk7KL-39" target="DEDyVDNNjn7AEogCk7KL-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-39" value="设置求解器的优化选项，调用CppAD::ipopt::solve方法求解优化问题，将结果存放在solution中" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="825" y="780" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DEDyVDNNjn7AEogCk7KL-41" target="DEDyVDNNjn7AEogCk7KL-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-41" value="将求解出的x y theta存放到mpc_x/y/theta数组中，将控制变量存放到result中并返回" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="825" y="920" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DEDyVDNNjn7AEogCk7KL-43" value="结束" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="1060" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
